@@ -1,3 +1,9 @@
+# ignore data files that are too big for github
+data/*
+
+# ignore mac files
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -99,3 +105,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Vim Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
