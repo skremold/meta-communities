@@ -1,6 +1,9 @@
 # ignore data files that are too big for github
 data/*
 
+# ignore temp location for installed binaries
+install/*
+
 # ignore mac files
 .DS_Store
 
