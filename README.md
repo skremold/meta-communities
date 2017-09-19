@@ -49,19 +49,32 @@ Running:
 # Retain sequences which are Unassigned in the output sequence file[default: False]
 
 
+FILE_ROOT=Hundley_2652B
 
 FILE_ROOT=Purdy_1937B
-
-FILE_ROOT=Hundley_2652B
-split_libraries.py -m ${FILE_ROOT}.txt -b 8 -p -f data/${FILE_ROOT}.fna -q data/${FILE_ROOT}.qual -o out/${FILE_ROOT}/split_lib/
+OUT_ROOT=out/${FILE_ROOT}
+SOURCE_FASTA=data/${FILE_ROOT}.fna
+SPLIT_FASTA=${OUT_ROOT}/split_lib/seqs.fna
+split_libraries.py -m ${FILE_ROOT}.txt -b 8 -p -f ${SOURCE_FASTA} -q data/${FILE_ROOT}.qual -o ${OUT_ROOT}/split_lib/
 
 # -m, --otu_picking_method [default: uclust]
-pick_otus.py -i out/${FILE_ROOT}/split_lib/seqs.fna -o out/${FILE_ROOT}/uclust_picked_otus/
+OTUS_OUTDIR=${OUT_ROOT}/uclust_picked_otus
+pick_otus.py -i out/${FILE_ROOT}/split_lib/seqs.fna -o ${OTUS_OUTDIR}
+
+OTUS_TXT=${OTUS_OUTDIR}/seqs_otus.txt
+pick_rep_set.py -i ${OTUS_TXT} -f ${SPLIT_FASTA} -o ${OUT_ROOT}/rep_set.fna
+
 
 ```
 
 
 
+
+for i in "one" "two"
+do
+   echo "$i"
+   # or do whatever with individual element of the array
+done
 
 
 
