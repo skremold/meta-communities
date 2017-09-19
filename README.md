@@ -26,16 +26,31 @@ requires `data` to contain the following files containing sequence data:
 # MD5:   58deb8188a4278584826f3c34e1061c7
 ```
 
-2. Install Qiime1
+2. Install Qiime2
 ```
-conda create -n qiime1 python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda
+conda create -n qiime2-2017.8 --file https://data.qiime2.org/distro/core/qiime2-2017.8-conda-osx-64.txt
 ```
 
 ## Running Software
 
 ```
-source activate qiime1
+source activate qiime2-2017.8
+source tab-qiime
 ```
 
 
 
+### Citacions
+
+Lists software packages followed by citacions
+
+```
+qiime info --citations > qiime_info_citations.txt
+```
+
+
+### Deactivate the Qiime environment
+
+```
+source deactivate
+```

@@ -1,0 +1,92 @@
+System versions
+Python version: 3.5.4
+QIIME 2 release: 2017.8
+QIIME 2 version: 2017.8.0
+q2cli version: 2017.8.0
+
+Installed plugins
+alignment 2017.8.0
+composition 2017.8.0
+dada2 2017.8.0
+deblur 2017.8.0
+demux 2017.8.0
+diversity 2017.8.0
+emperor 2017.8.0
+feature-classifier 2017.8.0
+feature-table 2017.8.0
+gneiss 2017.8.0
+longitudinal 2017.8.0
+metadata 2017.8.0
+phylogeny 2017.8.0
+quality-filter 2017.8.0
+sample-classifier 2017.8.0
+taxa 2017.8.0
+types 2017.8.0
+
+Application config directory
+/Users/sallen/Library/Application Support/q2cli
+
+Getting help
+To get help with QIIME 2, visit https://qiime2.org
+
+Citing QIIME 2
+If you use QIIME 2 in any published work, you should cite QIIME 2 and the plugins that you used. The citations for QIIME 2 and all installed plugins follow.
+
+Citations
+QIIME 2 framework and command line interface
+Pending a QIIME 2 publication, please cite QIIME using the original publication: http://www.ncbi.nlm.nih.gov/pubmed/20383131
+
+alignment 2017.8.0
+MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Katoh K, Standley DM. Mol Biol Evol. 2013 Apr;30(4):772-80. doi: 10.1093/molbev/mst010.
+
+composition 2017.8.0
+Analysis of composition of microbiomes: a novel method for studying microbial composition.
+Mandal S, Van Treuren W, White RA, Eggesbø M, Knight R, Peddada SD.
+Microb Ecol Health Dis. 2015 May 29;26:27663. doi: 10.3402/mehd.v26.27663.
+
+dada2 2017.8.0
+DADA2: High-resolution sample inference from Illumina amplicon data. Benjamin J Callahan, Paul J McMurdie, Michael J Rosen, Andrew W Han, Amy Jo A Johnson, Susan P Holmes. Nature Methods 13, 581–583 (2016) doi:10.1038/nmeth.3869.
+
+deblur 2017.8.0
+Deblur rapidly resolves single-nucleotide community sequence patterns. Amnon Amir, Daniel McDonald, Jose A. Navas-Molina, Evguenia Kopylova, Jamie Morton, Zhenjiang Zech Xu, Eric P. Kightley, Luke R. Thompson, Embriette R. Hyde, Antonio Gonzalez, Rob Knight. mSystems Mar 2017, 2 (2) doi:10.1128/mSystems.00191-16.
+
+demux 2017.8.0
+No citation available. Cite plugin website: https://github.com/qiime2/q2-demux
+
+diversity 2017.8.0
+No citation available. Cite plugin website: https://github.com/qiime2/q2-diversity
+
+emperor 2017.8.0
+EMPeror: a tool for visualizing high-throughput microbial community data.
+Vazquez-Baeza Y, Pirrung M, Gonzalez A, Knight R.
+Gigascience. 2013 Nov 26;2(1):16.
+
+feature-classifier 2017.8.0
+No citation available. Cite plugin website: https://github.com/qiime2/q2-feature-classifier
+
+feature-table 2017.8.0
+The Biological Observation Matrix (BIOM) format or: how I learned to stop worrying and love the ome-ome. Daniel McDonald, Jose C Clemente, Justin Kuczynski, Jai Ram Rideout, Jesse Stombaugh, Doug Wendel, Andreas Wilke, Susan Huse, John Hufnagle, Folker Meyer, Rob Knight and J Gregory Caporaso. GigaScience 1:7 (2012).doi:10.1186/2047-217X-1-7
+
+gneiss 2017.8.0
+Morton JT, Sanders J, Quinn RA, McDonald D, Gonzalez A, Vázquez-Baeza Y Navas-Molina JA, Song SJ, Metcalf JL, Hyde ER, Lladser M, Dorrestein PC, Knight R. 2017. Balance trees reveal microbial niche differentiation mSystems 2:e00162-16. https://doi.org/10.1128/mSystems.00162-16.
+
+longitudinal 2017.8.0
+No citation available. Cite plugin website: https://github.com/qiime2/q2-longitudinal
+
+metadata 2017.8.0
+No citation available. Cite plugin website: https://github.com/qiime2/q2-metadata
+
+phylogeny 2017.8.0
+FastTree 2 – Approximately Maximum-Likelihood Trees for Large Alignments. Price MN, Dehal PS, Arkin AP (2010) PLOS ONE 5(3): e9490. doi: 10.1371/journal.pone.0009490
+
+quality-filter 2017.8.0
+Quality-filtering vastly improves diversity estimates from Illumina amplicon sequencing. Nicholas A Bokulich, Sathish Subramanian, Jeremiah J Faith, Dirk Gevers, Jeffrey I Gordon, Rob Knight, David A Mills & J Gregory Caporaso. Nature Methods 10, 57–59 (2013) doi:10.1038/nmeth.2276
+
+sample-classifier 2017.8.0
+No citation available. Cite plugin website: https://github.com/nbokulich/q2-sample-classifier
+
+taxa 2017.8.0
+No citation available. Cite plugin website: https://github.com/qiime2/q2-taxa
+
+types 2017.8.0
+No citation available. Cite plugin website: https://github.com/qiime2/q2-types
