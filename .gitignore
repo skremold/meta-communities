@@ -1,5 +1,6 @@
-# ignore data files that are too big for github
+# ignore data input and output files that are too big for github
 data/*
+out/*
 
 # ignore temp location for installed binaries
 install/*

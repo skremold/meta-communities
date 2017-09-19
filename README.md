@@ -48,7 +48,15 @@ Running:
 # Maximum number of errors in barcode [default: 1.5]
 # Retain sequences which are Unassigned in the output sequence file[default: False]
 
-split_libraries.py -m Hundley_2652B.txt -b 8 -p -f data/Hundley_2652B.fna -q data/Hundley_2652B.qual -o data/Hundley_2652B_split_lib_out/
+
+
+FILE_ROOT=Purdy_1937B
+
+FILE_ROOT=Hundley_2652B
+split_libraries.py -m ${FILE_ROOT}.txt -b 8 -p -f data/${FILE_ROOT}.fna -q data/${FILE_ROOT}.qual -o out/${FILE_ROOT}/split_lib/
+
+# -m, --otu_picking_method [default: uclust]
+pick_otus.py -i out/${FILE_ROOT}/split_lib/seqs.fna -o out/${FILE_ROOT}/uclust_picked_otus/
 
 ```
 
