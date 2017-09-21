@@ -64,18 +64,29 @@ pick_otus.py -i out/${FILE_ROOT}/split_lib/seqs.fna -o ${OTUS_OUTDIR}
 OTUS_TXT=${OTUS_OUTDIR}/seqs_otus.txt
 pick_rep_set.py -i ${OTUS_TXT} -f ${SPLIT_FASTA} -o ${OUT_ROOT}/rep_set.fna
 
+assign_taxonomy.py -i ${OUT_ROOT}/rep_set.fna -o ${OUT_ROOT}/taxonomy_results/
+
+
+make_otu_table.py -i ${OTUS_TXT} -t ${OUT_ROOT}/taxonomy_results/rep_set_tax_assignments.txt -o ${OUT_ROOT}/otu_table.biom
+
+biom convert -i ${OUT_ROOT}/otu_table.biom -o ${OUT_ROOT}/otu_table_tabseparated.txt --to-tsv --header-key taxonomy --output-metadata-id "ConsensusLineage"
+
+# the following runs, but output has not been verified, not sure if it is needed:
+summarize_taxa.py -i ${OUT_ROOT}/otu_table.biom -o ${OUT_ROOT}/taxonomy_summaries/
 
 ```
 
 
+TODO:
 
-
+Add in a loop like this to run both data sets
+```
 for i in "one" "two"
 do
    echo "$i"
    # or do whatever with individual element of the array
 done
-
+```
 
 
 
