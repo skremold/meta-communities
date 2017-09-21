@@ -50,8 +50,13 @@ Running:
 
 
 FILE_ROOT=Hundley_2652B
+RARIFACTON_LEVEL=1000
 
 FILE_ROOT=Purdy_1937B
+RARIFACTON_LEVEL=9000
+
+
+
 OUT_ROOT=out/${FILE_ROOT}
 SOURCE_FASTA=data/${FILE_ROOT}.fna
 SPLIT_FASTA=${OUT_ROOT}/split_lib/seqs.fna
@@ -71,8 +76,16 @@ make_otu_table.py -i ${OTUS_TXT} -t ${OUT_ROOT}/taxonomy_results/rep_set_tax_ass
 
 biom convert -i ${OUT_ROOT}/otu_table.biom -o ${OUT_ROOT}/otu_table_tabseparated.txt --to-tsv --header-key taxonomy --output-metadata-id "ConsensusLineage"
 
-# the following runs, but output has not been verified, not sure if it is needed:
-summarize_taxa.py -i ${OUT_ROOT}/otu_table.biom -o ${OUT_ROOT}/taxonomy_summaries/
+
+OTU_TABLE_FULL=${OUT_ROOT}/otu_table.biom
+
+summarize_taxa.py -i ${OTU_TABLE_FULL} -o ${OUT_ROOT}/taxonomy_summaries/
+
+
+
+single_rarefaction.py -i ${OTU_TABLE_FULL} -o ${OUT_ROOT}/otu_table_${RARIFACTON_LEVEL}.biom -d ${RARIFACTON_LEVEL}
+
+biom convert -i ${OUT_ROOT}/otu_table_${RARIFACTON_LEVEL}.biom -o ${OUT_ROOT}/otu_table_${RARIFACTON_LEVEL}.txt --header-key taxonomy --output-metadata-id ConsensusLineage  --to-tsv --table-type="OTU table"
 
 ```
 
